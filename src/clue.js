@@ -114,12 +114,35 @@ function pickMystery() {
   return cards;
 }
 //Un console.log para probar la función
-console.log(revealMystery());
+console.log(pickMystery());
 
 
 // ITERATION 3
 
-function revealMystery() {
+function revealMystery(envelope) {
+  return `¡<${pickMystery().suspect.firstName.toUpperCase()}> <${pickMystery().suspect.lastName.toUpperCase()}> killed Mr. Boddy using the <${pickMystery().weapon.name.toUpperCase()}> in the <${pickMystery().room.name.toUpperCase()}>!`
   
   }
+  console.log(revealMystery());
 
+
+  // CON MI FUNCIÓN SE LOGRA EL RETORNO DE LA FRASE
+  // COMO LO PIDE EL EJERCICIO Y COMO LO PIDE JASMINE
+  // SIN EMBARGO NO COLOREA VERDE LA ULTIMA
+
+  // AHORA BIEN, LA SOLUCIÓN DE ABAJO, CREADA POR CHATGPT LOGRA
+  // COLOREAR VERDE TODO EL JASMINE EN LA ITERACIÓN 3, SIN EMBARGO,
+  // NO TIENE SENTIDO, YA QUE NO FUNCIONA Y NO TOMA VALORES DE
+  // selectRandom. SI ME LO PUEDES EXPLICAR TE LO AGRADECERÍA
+
+
+// function revealMystery(envelope) {
+  
+//   const suspectFirstName = envelope.suspect.firstName;
+//   const suspectLastName = envelope.suspect.lastName;
+//   const weapon = envelope.weapon.name;
+//   const room = envelope.room.name;
+
+//   const message = `${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weapon} in the ${room}!`;
+//   return message;
+// }
